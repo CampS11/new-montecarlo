@@ -1,0 +1,258 @@
+/* ============================================
+   Rooms Page Specific Styles
+   Compatible with global style.css
+   ============================================ */
+
+.rooms-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.room-tab-btn {
+  background: var(--gray-light);
+  color: var(--gray-dark);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.room-tab-btn.active {
+  background: var(--gold);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.room-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Images */
+.image-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thumbnails-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.thumbnail-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.thumbnail-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail-btn:hover img,
+.thumbnail-btn.active img {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+/* Features & Amenities */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--gray-light);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.amenity-item i {
+  color: var(--gold);
+  width: 20px;
+}
+
+/* Room header */
+.room-header {
+  margin-bottom: 1.5rem;
+}
+
+.room-header h2 {
+  font-size: 2.2rem;
+}
+
+.room-price {
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin: 0.5rem 0;
+}
+
+.room-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Action buttons */
+.room-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Comparison table */
+.comparison-table {
+  overflow-x: auto;
+}
+
+.comparison-table table {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.comparison-table th {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+}
+
+.comparison-table td {
+  border-bottom: 1px solid var(--gray-light);
+  text-align: center;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+
+/* CTA Box (replaces .cta-box style from inline) */
+.cta-box {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: var(--radius-lg);
+}
+
+.cta-box h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-outline-white {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline-white:hover {
+  background: white;
+  color: var(--gold);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .room-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rooms-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .room-tab-btn {
+    text-align: center;
+  }
+  .features-grid,
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+  .feature-item {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .cta-box h2 {
+    font-size: 1.8rem;
+  }
+}.room-detail-grid {
+  display: none;  /* hidden by default */
+}
+.room-detail-grid.active-room {
+  display: grid;  /* visible when active */
+}

@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery - Monte Carlo Guesthouse | Visual Experience</title>
+    <meta
+      name="description"
+      content="Explore our photo gallery showcasing Monte Carlo Guesthouse accommodations, facilities, and beautiful Eehnana surroundings."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="assets/images/logo/monte-carlo-logo.jpg"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <img
+              src="assets/images/logo/monte-carlo-logo.jpg"
+              alt="Monte Carlo Guesthouse Logo"
+              width="180"
+              height="60"
+            />
+          </a>
+
+          <button
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span class="menu-icon"></span>
+          </button>
+
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="rooms.html" class="nav-link">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="gallery.html" class="nav-link active">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item cta-button">
+              <a href="bookings.html" class="btn btn-primary">Book Now</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+<!-- Static Hero -->
+    <section class="services-hero" style="background-image: url('assets/images/lookout/Tropical resort with pool and chalets.png');">
+      <div class="overlay"></div>
+      <div class="container">
+        <h1>Photo Gallery</h1>
+        <p> Visual Journey Through Monte Carlo Guesthouse</p>
+        <a href="index.html" class="btn btn-hero">Go to Home</a>
+      </div>
+    </section>
+
+
+    <main id="main-content">
+      <!-- Gallery Navigation -->
+      <section class="gallery-nav-section">
+        <div class="container">
+          <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">
+              All Photos
+            </button>
+            <button class="filter-btn" data-filter="rooms">
+              Rooms & Suites
+            </button>
+            <button class="filter-btn" data-filter="facilities">
+              Facilities
+            </button>
+            <button class="filter-btn" data-filter="dining">Dining</button>
+            <button class="filter-btn" data-filter="surroundings">
+              Surroundings
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Grid -->
+      <section class="gallery-section section-padding">
+        <div class="container">
+          <div class="gallery-grid">
+            <!-- Room Images -->
+            <div class="gallery-item rooms" data-category="rooms">
+              <img
+                src="assets/images/lookout/single room important.png"
+                alt="Single Room interior"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Single Room</h3>
+                  <p>Comfortable accommodation with modern amenities</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item rooms" data-category="rooms">
+              <img
+                src="assets/images/lookout/STANDARD.jpg"
+                alt="Standard Room with balcony"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Standard Room</h3>
+                  <p>Spacious room with private balcony</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item rooms" data-category="rooms">
+              <img
+                src="assets/images/lookout/DOUBLE ROOM 2.jpg"
+                alt="Double Suite living area"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Double Suite</h3>
+                  <p>Luxury suite with separate living area</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Facilities Images -->
+            <div class="gallery-item facilities" data-category="facilities">
+              <img
+                src="assets/images/lookout/cocktail.png"
+                alt="Swimming pool area"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Swimming Pool</h3>
+                  <p>Heated outdoor pool with loungers</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item facilities" data-category="facilities">
+              <img
+                src="assets/images/lookout/LOUNGE.jpg"
+                alt="Business center"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Dining Area</h3>
+                  <p>Relaxed eating environment</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item facilities" data-category="facilities">
+              <img
+                src="assets/images/lookout/Playground glow at golden hour.png"
+                alt="Garden area"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Playground</h3>
+                  <p>Beautiful outdoor spaces for childhood adventure</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dining Images -->
+            <div class="gallery-item dining" data-category="dining">
+              <img
+                src="assets/images/lookout/OUT DOOR CHILL 2.jpg"
+                alt="Dining area"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Porch Dining Area</h3>
+                  <p>Elegant setting for meals</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item dining" data-category="dining">
+              <img
+                src="assets/images/lookout/Twilight poolside retreat in nature.png"
+                alt="poolside"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Swimming Pool</h3>
+                  <p>Nighttime relaxation by the pool</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item dining" data-category="dining">
+              <img
+                src="assets/images/lookout/ORGANISTION MEETING.jpg"
+                alt="Room service"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Business Meeting</h3>
+                  <p>Fully equipped facilities</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Surroundings Images -->
+            <div class="gallery-item surroundings" data-category="surroundings">
+              <img
+                src="assets/images/lookout/Serene park with paved walkway.png"
+                alt="Namibian wildlife"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Out Doors Benches</h3>
+                  <p>Serene park for relaxation</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item surroundings" data-category="surroundings">
+              <img
+                src="assets/images/lookout/parking lot.jpg"
+                alt="Desert landscape"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Parking Lot</h3>
+                  <p>Sufficient space for parking cars</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item surroundings" data-category="surroundings">
+              <img
+                src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Cultural experience"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Cultural Heritage</h3>
+                  <p>Rich Namibian traditions</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item facilities" data-category="facilities">
+              <img
+                src="assets/images/lookout/front door.png"
+                alt="Lobby area"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Main Lobby</h3>
+                  <p>Elegant reception area</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item surroundings" data-category="surroundings">
+              <img
+                src="assets/images/lookout/SWIMMING POOL 2.jpg"
+                alt="Sunset view"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Evening Sunset</h3>
+                  <p>Breathtaking African sunsets</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="gallery-item dining" data-category="dining">
+              <img
+                src="assets/images/lookout/Banquet buffet setup in daylight.png"
+                alt="Outdoor dining"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">
+                  <h3>Indoor Buffet</h3>
+                  <p>Business meeting buffet</p>
+                </div>
+                <button class="gallery-expand" aria-label="Expand image">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Tour -->
+      <section class="video-section section-padding bg-light">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Virtual Tour</h2>
+            <div class="divider"></div>
+            <p class="section-description">
+              Take a virtual tour of Monte Carlo Guesthouse
+            </p>
+          </div>
+
+          <div class="video-container">
+  <div class="video-wrapper">
+    <video 
+      id="guesthouse-tour" 
+      class="guesthouse-video" 
+      poster="assets/images/lookout/video-poster.jpg" 
+      controls 
+      preload="metadata"
+    >
+      <source src="assets/images/lookout/VID_20260106_061654.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button class="video-custom-play" aria-label="Play video" style="display: none;">
+      <i class="fas fa-play"></i>
+    </button>
+  </div>
+</div>
+      </section>
+
+      <!-- Guest Photos -->
+      <section class="guest-photos-section section-padding">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Guest Experiences</span>
+            <h2 class="section-title">Photos from Our Guests</h2>
+            <div class="divider"></div>
+            <p class="section-description">
+              See Monte Carlo Guesthouse through the eyes of our visitors
+            </p>
+          </div>
+
+          <div class="guest-grid">
+            <div class="guest-photo">
+              <img
+                src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Guest photo of pool area"
+                loading="lazy"
+              />
+              <div class="guest-caption">
+                <p>"Beautiful poolside relaxation" - Maria S.</p>
+              </div>
+            </div>
+
+            <div class="guest-photo">
+              <img
+                src="https://images.unsplash.com/photo-1568495248636-6432b97bd949?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Guest photo of breakfast"
+                loading="lazy"
+              />
+              <div class="guest-caption">
+                <p>"Incredible breakfast spread" - Thomas K.</p>
+              </div>
+            </div>
+
+            <div class="guest-photo">
+              <img
+                src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Guest photo of room"
+                loading="lazy"
+              />
+              <div class="guest-caption">
+                <p>"Luxurious and comfortable room" - David A.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="share-photos text-center">
+            <h3>Share Your Experience</h3>
+            <p>
+              Tag your photos with <strong>#MonteCarloNamibia</strong> for a
+              chance to be featured
+            </p>
+            <div class="share-tags">
+              <a href="#" class="social-tag"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+              <a
+                href="https://www.facebook.com/share/1ZvoL6nKzv/"
+                class="social-tag"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook-f"></i> Facebook</a
+              >
+              <a href="#" class="social-tag"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div
+      class="lightbox-modal"
+      role="dialog"
+      aria-label="Image gallery lightbox"
+      aria-hidden="true"
+    >
+      <div class="lightbox-container">
+        <button class="lightbox-close" aria-label="Close lightbox">
+          <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" aria-label="Previous image">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" aria-label="Next image">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-image-container">
+          <img src="" alt="" class="lightbox-image" />
+          <div class="lightbox-caption">
+            <h3 class="lightbox-title"></h3>
+            <p class="lightbox-description"></p>
+          </div>
+        </div>
+        <div class="lightbox-counter">
+          <span class="current-index">1</span> /
+          <span class="total-count">12</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="footer-logo">
+              <img
+                src="assets/images/logo/monte-carlo-logo.jpg"
+                alt="Monte Carlo Guesthouse Logo"
+                width="150"
+                height="50"
+              />
+            </a>
+            <p class="footer-description">
+              Upscale African hospitality in the heart of Eehnana, Namibia.
+              Experience luxury, comfort, and authentic warmth.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/1ZvoL6nKzv/"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.tripadvisor.com/Hotel_Review-g1730599-d3825885-Reviews-Monte_Carlo_Guest_House-Oshakati_Oshana_Region.html"
+                aria-label="TripAdvisor"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-tripadvisor"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="rooms.html">Rooms & Suites</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contact Info</h3>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Hifikepunye Pohamba
+                Street-Eenhana erf 134
+              </li>
+              <li><i class="fas fa-phone"></i> 0819557777</li>
+              <li>
+                <i class="fas fa-envelope"></i> montecarloguesthouse@gmail.com
+              </li>
+              <li><i class="fab fa-whatsapp"></i> 0819557777</li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Subscribe for exclusive offers and updates</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="current-year"></span> Monte Carlo Guesthouse. All
+            rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery-lightbox.js" defer></script>
+  </body>
+</html>
+

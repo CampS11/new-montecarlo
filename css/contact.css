@@ -1,0 +1,134 @@
+/* custom overrides & missing utility classes */
+body {
+    font-family: 'Inter', sans-serif;
+}
+h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+@media (min-width: 640px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+@media (min-width: 768px) {
+    .section-padding {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+.bg-light {
+    background-color: #faf9f7;
+}
+.divider {
+    width: 70px;
+    height: 3px;
+    background-color: #d97706; /* amber-600 */
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+.divider.left {
+    margin-left: 0;
+    margin-right: auto;
+}
+.divider.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+.section-description {
+    color: #4b5563;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.btn-primary {
+    background-color: #d97706;
+    color: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.btn-primary:hover {
+    background-color: #b45309;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+.btn-outline {
+    background-color: transparent;
+    border-color: #d97706;
+    color: #d97706;
+}
+.btn-outline:hover {
+    background-color: #d97706;
+    color: white;
+}
+/* fade-up animation for scroll reveal */
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+.fade-up.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* form success transition */
+.form-transition {
+    transition: opacity 0.25s ease, transform 0.2s ease;
+}
+/* map group hover scale */
+.map-hover-zoom {
+    transition: transform 0.7s ease;
+}
+.group:hover .map-hover-zoom {
+    transform: scale(1.05);
+}
+/* custom scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+/* social card hover */
+.social-card {
+    transition: all 0.3s ease;
+}
+.social-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -12px rgba(0,0,0,0.15);
+}
+.icon-hover-scale {
+    transition: transform 0.2s ease;
+}
+.group:hover .icon-hover-scale {
+    transform: scale(1.1);
+}

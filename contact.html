@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Contact Us - Monte Carlo Guesthouse | Get in Touch</title>
+    <meta
+      name="description"
+      content="Contact Monte Carlo Guesthouse in Eehnana, Namibia. Reach us via phone, email, WhatsApp, or visit our location."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* ----- GLOBAL FIXES: prevent ANY protruding content (cards, buttons, emergency) ----- */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+        max-width: 100%;
+      }
+      .container {
+        overflow-x: hidden;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      /* ----- CONTACT CARDS (no protrusion) ----- */
+      .contact-card {
+        overflow: visible;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        height: auto !important;
+        min-height: auto !important;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        background: #e9e6e2;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      .contact-card * {
+        max-width: 100%;
+        word-break: break-word;
+      }
+      .contact-card .btn,
+      .contact-card .btn-whatsapp,
+      .contact-card .btn-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        white-space: normal;
+        width: auto;
+        max-width: 100%;
+        text-align: center;
+      }
+      .contact-card .btn-whatsapp {
+        padding: 12px 16px;
+        line-height: 1.3;
+      }
+
+      /* ----- EMERGENCY SECTION - CRITICAL FIX for protruding button ----- */
+      .emergency-section {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      .emergency-alert {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 1.5rem;
+        background: #c27373;
+        border-radius: 24px;
+        padding: 1.8rem 2rem;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+      }
+      .alert-content {
+        flex: 1;
+        min-width: 0;  /* allows shrinking on small screens */
+        word-wrap: break-word;
+      }
+      .emergency-contact {
+        margin: 1rem 0;
+      }
+      .btn-emergency {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background-color: #c62828;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.2s;
+        white-space: normal;
+        word-break: keep-all;
+        max-width: 100%;
+        width: auto;
+        font-size: 1rem;
+        line-height: 1.2;
+        text-align: center;
+        flex-wrap: wrap;
+      }
+      .btn-emergency i {
+        font-size: 1.2rem;
+      }
+      /* ensure button never overflows on mobile */
+      @media (max-width: 550px) {
+        .btn-emergency {
+          padding: 12px 18px;
+          font-size: 0.9rem;
+          width: 100%;
+          justify-content: center;
+        }
+        .emergency-alert {
+          padding: 1.5rem;
+          flex-direction: column;
+        }
+        .alert-icon {
+          align-self: center;
+        }
+      }
+      /* additional safety: emergency alert text wrapping */
+      .alert-content p,
+      .alert-content h3 {
+        word-break: break-word;
+      }
+      .alert-note {
+        font-size: 0.85rem;
+        opacity: 0.8;
+      }
+
+      /* ----- map & directions (no overflow) ----- */
+      .map-placeholder {
+        max-width: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+      }
+      .map-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+      .map-overlay {
+        word-break: break-word;
+      }
+      .transport-option {
+        flex-wrap: wrap;
+        word-break: break-word;
+      }
+
+      /* ----- social cards (ensure no protrusion) ----- */
+      .social-card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem;
+        word-break: break-word;
+        max-width: 100%;
+      }
+      .social-info p {
+        white-space: normal;
+      }
+
+      /* ----- general responsiveness for grid ----- */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .contact-form-wrapper,
+      .contact-map-wrapper {
+        flex: 1 1 45%;
+        min-width: 0;
+      }
+      @media (max-width: 992px) {
+        .contact-container {
+          flex-direction: column;
+        }
+        .contact-form-wrapper,
+        .contact-map-wrapper {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="assets/images/logo/monte-carlo-logo.jpg"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <img
+              src="assets/images/logo/monte-carlo-logo.jpg"
+              alt="Monte Carlo Guesthouse Logo"
+              width="180"
+              height="60"
+            />
+          </a>
+          <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="menu-icon"></span>
+          </button>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+            <li class="nav-item cta-button"><a href="bookings.html" class="btn btn-primary">Book Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="services-hero" style="background-image: url('assets/images/lookout/front door.png');">
+      <div class="overlay"></div>
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in Touch with Monte Carlo Guesthouse</p>
+        <a href="tel:0819557777" class="btn btn-hero">Quick call</a>
+      </div>
+    </section>
+
+    <main id="main-content">
+      <!-- Contact Info Cards -->
+      <section class="contact-info-section section-padding">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <h3>Our Location</h3>
+              <address>Hifikepunye Pohamba Street-Eenhana erf 134<br />Namibia</address>
+              <a href="#map" class="btn-link">View on Map <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <h3>Phone & WhatsApp</h3>
+              <p>0819557777</p>
+              <a href="https://wa.me/264819557777?text=Hi%20Monte%20Carlo%20Guesthouse,%20I%20would%20like%20to%20make%20a%20booking." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <h3>Email</h3>
+              <p>montecarloguesthouse@gmail.com</p>
+              <a href="mailto:montecarloguesthouse@gmail.com" class="btn-link">Send Email <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon"><i class="fas fa-clock"></i></div>
+              <h3>Reception Hours</h3>
+              <p>24/7 Reception</p>
+              <p>Check-in: 2:00 PM<br />Check-out: 11:00 AM</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form & Map -->
+      <section class="contact-main-section section-padding bg-light">
+        <div class="container">
+          <div class="contact-container">
+            <div class="contact-form-wrapper">
+              <div class="section-header left-align">
+                <h2 class="section-title">Send Us a Message</h2>
+                <div class="divider left"></div>
+                <p class="section-description">Have questions or special requests? Fill out the form below and we'll get back to you within 24 hours.</p>
+              </div>
+              <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                  <div class="form-field">
+                    <label for="contact-name">Full Name *</label>
+                    <input type="text" id="contact-name" name="name" required />
+                    <div class="error-message" id="name-error"></div>
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-email">Email Address *</label>
+                    <input type="email" id="contact-email" name="email" required />
+                    <div class="error-message" id="email-error"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-field">
+                    <label for="contact-phone">Phone Number</label>
+                    <input type="tel" id="contact-phone" name="phone" />
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-subject">Subject *</label>
+                    <select id="contact-subject" name="subject" required>
+                      <option value="">Select Subject</option>
+                      <option value="booking">Booking Inquiry</option>
+                      <option value="availability">Availability Check</option>
+                      <option value="services">Services Information</option>
+                      <option value="general">General Inquiry</option>
+                      <option value="feedback">Feedback/Compliment</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <div class="error-message" id="subject-error"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-field full-width">
+                    <label for="contact-message">Message *</label>
+                    <textarea id="contact-message" name="message" rows="6" required placeholder="Please include details such as dates of stay, number of guests, and any special requirements..."></textarea>
+                    <div class="error-message" id="message-error"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-field full-width">
+                    <div class="checkbox-field">
+                      <input type="checkbox" id="contact-newsletter" name="newsletter" />
+                      <label for="contact-newsletter">Subscribe to our newsletter for special offers and updates</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </div>
+              </form>
+            </div>
+            <div class="contact-map-wrapper">
+              <div class="map-container" id="map">
+                <div class="map-placeholder">
+                  <div class="map-image">
+                    <img src="assets/images/lookout/outdoor.jpg" alt="Map placeholder - Monte Carlo Guesthouse location" loading="lazy" />
+                  </div>
+                  <div class="map-overlay">
+                    <h3>Our Location</h3>
+                    <p>Monte Carlo Guesthouse, Eehnana, Namibia</p>
+                    <div class="map-actions">
+                      <a href="https://maps.google.com/?q=Monte+Carlo+Guesthouse+Eehnana+Namibia" class="btn btn-outline-white" target="_blank">
+                        <i class="fas fa-map-marked-alt"></i> Open in Google Maps
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="directions-info">
+                <h3>Getting Here</h3>
+                <div class="transport-options">
+                  <div class="transport-option">
+                    <i class="fas fa-car"></i>
+                    <div>
+                      <h4>By Car</h4>
+                      <p>From Windhoek: Take B1 north for approximately 300km, then follow signs to Eehnana. Ample parking available on-site.</p>
+                    </div>
+                  </div>
+                  <div class="transport-option">
+                    <i class="fas fa-plane"></i>
+                    <div>
+                      <h4>By Air</h4>
+                      <p>Nearest airport: Hosea Kutako International Airport (WDH). We can arrange airport transfers upon request.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Emergency Contact - FIXED BUTTON PROTRUSION -->
+      <section class="emergency-section section-padding">
+        <div class="container">
+          <div class="emergency-alert">
+            <div class="alert-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="alert-content">
+              <h3>Emergency Contact</h3>
+              <p>For urgent assistance during your stay, please contact our 24/7 emergency line:</p>
+              <div class="emergency-contact">
+                <a href="tel:0819557777" class="btn btn-emergency">
+                  <i class="fas fa-phone"></i> Emergency: 0819557777
+                </a>
+              </div>
+              <p class="alert-note">This line is monitored 24 hours a day for guest emergencies only.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Media -->
+      <section class="social-section section-padding bg-light">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Connect With Us</h2>
+            <div class="divider"></div>
+            <p class="section-description">Follow us on social media for the latest updates, offers, and beautiful photos from Monte Carlo Guesthouse.</p>
+          </div>
+          <div class="social-grid">
+            <a href="https://www.facebook.com/share/1ZvoL6nKzv/" class="social-card facebook" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+              <div class="social-info"><h3>Facebook</h3><p>Follow us for updates and community</p></div>
+            </a>
+            <a href="#" class="social-card instagram" target="_blank">
+              <div class="social-icon"><i class="fab fa-instagram"></i></div>
+              <div class="social-info"><h3>Instagram</h3><p>See photos from our guests and property</p></div>
+            </a>
+            <a href="https://www.tripadvisor.com/Hotel_Review-g1730599-d3825885-Reviews-Monte_Carlo_Guest_House-Oshakati_Oshana_Region.html" class="social-card tripadvisor" target="_blank" rel="noopener noreferrer">
+              <div class="social-icon"><i class="fab fa-tripadvisor"></i></div>
+              <div class="social-info"><h3>TripAdvisor</h3><p>Read reviews from our guests</p></div>
+            </a>
+            <a href="#" class="social-card youtube" target="_blank">
+              <div class="social-icon"><i class="fab fa-youtube"></i></div>
+              <div class="social-info"><h3>YouTube</h3><p>Watch videos of our property and area</p></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div class="contact-modal" role="dialog" aria-label="Message sent confirmation" aria-hidden="true">
+        <div class="modal-content">
+          <div class="modal-success">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h2>Message Sent!</h2>
+            <p>Thank you for contacting Monte Carlo Guesthouse. We've received your message and will respond within 24 hours.</p>
+            <div class="response-time">
+              <p><strong>Response Time:</strong> Typically within 24 hours</p>
+              <p><strong>Urgent Inquiries:</strong> Please call 0819557777</p>
+            </div>
+            <div class="modal-actions">
+              <button class="btn btn-primary" id="contact-close-modal">Close</button>
+              <a href="index.html" class="btn btn-outline">Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="footer-logo"><img src="assets/images/logo/monte-carlo-logo.jpg" alt="Monte Carlo Guesthouse Logo" width="150" height="50" /></a>
+            <p class="footer-description">Upscale African hospitality in the heart of Eehnana, Namibia. Experience luxury, comfort, and authentic warmth.</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/1ZvoL6nKzv/" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.tripadvisor.com/Hotel_Review-g1730599-d3825885-Reviews-Monte_Carlo_Guest_House-Oshakati_Oshana_Region.html" aria-label="TripAdvisor" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="rooms.html">Rooms & Suites</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact Info</h3>
+            <ul class="footer-contact">
+              <li><i class="fas fa-map-marker-alt"></i> Hifikepunye Pohamba Street-Eenhana erf 134</li>
+              <li><i class="fas fa-phone"></i> 0819557777</li>
+              <li><i class="fas fa-envelope"></i> montecarloguesthouse@gmail.com</li>
+              <li><i class="fab fa-whatsapp"></i> 0819557777</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Subscribe for exclusive offers and updates</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="current-year"></span> Monte Carlo Guesthouse. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/contact.js" defer></script>
+    <script>
+      (function() {
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+      })();
+    </script>
+  </body>
+</html>

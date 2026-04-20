@@ -1,0 +1,582 @@
+/* ============================================
+   MONTE CARLO GUESTHOUSE - RESPONSIVE STYLES
+   ============================================ */
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Desktop (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-col:last-child {
+        grid-column: 1 / -1;
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 2.25rem;
+    }
+    
+    .welcome-grid,
+    .about-grid,
+    .owner-grid {
+        gap: var(--space-lg);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .rooms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .room-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Mobile (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .nav-menu {
+        gap: var(--space-sm);
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .guest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .emergency-alert {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .alert-icon {
+        margin-bottom: var(--space-md);
+    }
+}
+
+/* Small Mobile (575px and down) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    .hero-section {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-content {
+        padding: 0 var(--space-md);
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .lead-text {
+        font-size: 1.1rem;
+    }
+    
+    .nav-menu {
+        padding: var(--space-lg) 0;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: var(--space-sm) 0;
+    }
+    
+    .btn-hero {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-contact li {
+        justify-content: center;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .guest-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .welcome-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .room-amenities {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .room-type-nav {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .room-type-btn {
+        width: 100%;
+    }
+    
+    .tabs-nav {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .tab-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .request-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .steps-indicator {
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+    
+    .steps-indicator::before {
+        display: none;
+    }
+    
+    .step {
+        flex-direction: row;
+        gap: var(--space-sm);
+    }
+    
+    .step-number {
+        margin-bottom: 0;
+    }
+    
+    .summary-dates,
+    .summary-room,
+    .summary-price {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form .form-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .transport-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .share-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lightbox-prev {
+        left: 10px;
+    }
+    
+    .lightbox-next {
+        right: 10px;
+    }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: var(--space-lg);
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-section {
+        height: 100vh;
+    }
+    
+    .hero-content {
+        padding-top: 80px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: var(--space-xs);
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: var(--space-sm);
+    }
+    
+    .nav-menu {
+        height: calc(100vh - 80px);
+        padding: var(--space-md) 0;
+    }
+}
+
+/* High Resolution Displays */
+@media (min-resolution: 192dpi) {
+    .hero-image {
+        background-image: url('assets/images/hero/hero-slide-1@2x.jpg');
+    }
+}
+
+/* Print Optimization */
+@media print {
+    .hero-section,
+    .cta-banner,
+    .booking-cta,
+    .social-section,
+    .emergency-section,
+    .video-section,
+    .gallery-nav-section,
+    .booking-steps,
+    .why-book-section {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+    
+    .section-padding {
+        padding: 1cm 0;
+    }
+    
+    .page-header {
+        margin-top: 0;
+        padding: 1cm 0;
+        background: none !important;
+        color: #000;
+    }
+    
+    .page-title,
+    .section-title,
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .btn {
+        display: none;
+    }
+    
+    .footer-bottom {
+        border-top: 1px solid #000;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1A1D25;
+        --navy: #FFFFFF;
+        --gray-light: #2A2D35;
+        --gray-dark: #F8F9FA;
+        --beige: #2A2D35;
+        --beige-light: #343A40;
+    }
+    
+    body {
+        background-color: var(--white);
+        color: var(--gray-dark);
+    }
+    
+    .main-header {
+        background-color: var(--white);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-link {
+        color: var(--navy);
+    }
+    
+    .room-card,
+    .service-card,
+    .activity-card,
+    .team-member,
+    .value-card,
+    .contact-card,
+    .summary-card,
+    .contact-options,
+    .booking-form-wrapper,
+    .contact-form-wrapper,
+    .faq-item,
+    .mission-statement,
+    .request-box {
+        background: var(--gray-light);
+        color: var(--gray-dark);
+    }
+    
+    .room-card h3,
+    .service-card h3,
+    .activity-card h3,
+    .team-member h3,
+    .value-card h3,
+    .contact-card h3,
+    .faq-question,
+    .form-title,
+    .section-title,
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--navy);
+    }
+    
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+        background: var(--white);
+        border-color: var(--gray-light);
+        color: var(--gray-dark);
+    }
+    
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+        border-color: var(--gold);
+    }
+    
+    .comparison-table {
+        background: var(--gray-light);
+    }
+    
+    .comparison-table th {
+        background: var(--navy);
+        color: var(--white);
+    }
+    
+    .comparison-table td {
+        border-color: var(--gray);
+        color: var(--gray-dark);
+    }
+    
+    .comparison-table tr:hover {
+        background: var(--gray);
+    }
+}

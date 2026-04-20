@@ -1,0 +1,714 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Now - Monte Carlo Guesthouse | Reserve Your Stay</title>
+    <meta
+      name="description"
+      content="Book your stay at Monte Carlo Guesthouse in Eehnana, Namibia. Check availability and make reservations online."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="assets/images/logo/monte-carlo-logo.jpg"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo">
+            <img
+              src="assets/images/logo/monte-carlo-logo.jpg"
+              alt="Monte Carlo Guesthouse Logo"
+              width="180"
+              height="60"
+            />
+          </a>
+
+          <button
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span class="menu-icon"></span>
+          </button>
+
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="rooms.html" class="nav-link">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="gallery.html" class="nav-link">Gallery</a>
+            </li>
+            
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item cta-button">
+              <a href="bookings.html" class="btn btn-primary">Book Now</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="services-hero" style="background-image: url('assets/images/lookout/front door.png');">
+      <div class="overlay"></div>
+      <div class="container">
+        <h1>Book Your Stay</h1>
+        <p>Reserve Your Luxury Accommodation in Eehnana</p>
+        <a href="contact.html" class="btn btn-hero">Contact Us</a>
+      </div>
+    </section>    <main id="main-content">
+      <!-- Booking Process Steps -->
+      <section class="booking-steps section-padding">
+        <div class="container">
+          <div class="steps-indicator">
+            <div class="step active">
+              <div class="step-number">1</div>
+              <div class="step-label">Select Dates</div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-label">Choose Room</div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-label">Guest Details</div>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-label">Confirmation</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking Form -->
+      <section class="booking-form-section section-padding">
+        <div class="container">
+          <div class="booking-container">
+            <div class="booking-form-wrapper">
+              <form id="booking-form" class="booking-form" novalidate>
+                <div class="form-section">
+                  <h2 class="form-title">Booking Details</h2>
+
+                  <div class="form-group date-group">
+                    <div class="form-field">
+                      <label for="checkin">
+                        <i class="fas fa-calendar-alt"></i> Check-in Date *
+                      </label>
+                      <input type="date" id="checkin" name="checkin" required />
+                      <div class="error-message" id="checkin-error"></div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="checkout">
+                        <i class="fas fa-calendar-alt"></i> Check-out Date *
+                      </label>
+                      <input
+                        type="date"
+                        id="checkout"
+                        name="checkout"
+                        required
+                      />
+                      <div class="error-message" id="checkout-error"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-field">
+                      <label for="room-type">
+                        <i class="fas fa-bed"></i> Room Type *
+                      </label>
+                      <select id="room-type" name="room-type" required>
+                        <option value="">Select Room Type</option>
+                        <option value="standard">Single Room</option>
+                        <option value="deluxe">Standard Room</option>
+                        <option value="executive">Double Suite</option>
+                      </select>
+                      <div class="error-message" id="room-type-error"></div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="guests">
+                        <i class="fas fa-user-friends"></i> Number of Guests *
+                      </label>
+                      <select id="guests" name="guests" required>
+                        <option value="">Select Number</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                      </select>
+                      <div class="error-message" id="guests-error"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-field full-width">
+                      <label for="special-requests">
+                        <i class="fas fa-comment-alt"></i> Special Requests
+                      </label>
+                      <textarea
+                        id="special-requests"
+                        name="special-requests"
+                        rows="3"
+                        placeholder="Any special requests or requirements for your stay..."
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-section">
+                  <h2 class="form-title">Guest Information</h2>
+
+                  <div class="form-group">
+                    <div class="form-field">
+                      <label for="first-name">
+                        <i class="fas fa-user"></i> First Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="first-name"
+                        name="first-name"
+                        required
+                      />
+                      <div class="error-message" id="first-name-error"></div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="last-name">
+                        <i class="fas fa-user"></i> Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="last-name"
+                        name="last-name"
+                        required
+                      />
+                      <div class="error-message" id="last-name-error"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-field">
+                      <label for="email">
+                        <i class="fas fa-envelope"></i> Email Address *
+                      </label>
+                      <input type="email" id="email" name="email" required />
+                      <div class="error-message" id="email-error"></div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="phone">
+                        <i class="fas fa-phone"></i> Phone Number *
+                      </label>
+                      <input type="tel" id="phone" name="phone" required />
+                      <div class="error-message" id="phone-error"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-field">
+                      <label for="country">
+                        <i class="fas fa-globe"></i> Country *
+                      </label>
+                      <input type="text" id="country" name="country" required />
+                      <div class="error-message" id="country-error"></div>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="nationality">
+                        <i class="fas fa-passport"></i> Nationality
+                      </label>
+                      <input type="text" id="nationality" name="nationality" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-section">
+                  <h2 class="form-title">Payment Information</h2>
+
+                  <div class="payment-notice">
+                    <p>
+                      <i class="fas fa-info-circle"></i> No payment required
+                      now. We'll contact you to confirm your reservation and
+                      provide payment details.
+                    </p>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-field full-width">
+                      <div class="checkbox-field">
+                        <input
+                          type="checkbox"
+                          id="terms"
+                          name="terms"
+                          required
+                        />
+                        <label for="terms">
+                          I agree to the
+                          <a href="terms.html#terms-and-conditions">terms and conditions</a> and
+                          <a href="terms.html#cancellation-policy">cancellation policy</a> *
+                        </label>
+                      </div>
+                      <div class="error-message" id="terms-error"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-field full-width">
+                      <div class="checkbox-field">
+                        <input
+                          type="checkbox"
+                          id="newsletter"
+                          name="newsletter"
+                        />
+                        <label for="newsletter">
+                          Subscribe to our newsletter for special offers and
+                          updates
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="fas fa-paper-plane"></i> Send Booking Request
+                  </button>
+                  <p class="form-note">
+                    You'll receive a confirmation email within 24 hours
+                  </p>
+                </div>
+              </form>
+            </div>
+
+            <div class="booking-summary">
+              <div class="summary-card">
+                <h3>Booking Summary</h3>
+
+                <div class="summary-dates">
+                  <div class="summary-item">
+                    <span>Check-in</span>
+                    <strong id="summary-checkin">--</strong>
+                  </div>
+                  <div class="summary-item">
+                    <span>Check-out</span>
+                    <strong id="summary-checkout">--</strong>
+                  </div>
+                  <div class="summary-item">
+                    <span>Nights</span>
+                    <strong id="summary-nights">0</strong>
+                  </div>
+                </div>
+
+                <div class="summary-room">
+                  <div class="summary-item">
+                    <span>Room Type</span>
+                    <strong id="summary-room">--</strong>
+                  </div>
+                  <div class="summary-item">
+                    <span>Guests</span>
+                    <strong id="summary-guests">--</strong>
+                  </div>
+                </div>
+
+                <div class="summary-price">
+                  <div class="summary-item">
+                    <span>Room Rate</span>
+                    <strong id="summary-rate" class="price-note"
+                      >Prices vary - contact us for today's rate.</strong
+                    >
+                  </div>
+                  <div class="summary-item">
+                    <span>Nights</span>
+                    <strong id="summary-nights-count">0</strong>
+                  </div>
+                  <div class="summary-total">
+                    <span>Total Estimate</span>
+                    <strong id="summary-total" class="price-note"
+                      >Contact us for a tailored quote.</strong
+                    >
+                  </div>
+                </div>
+
+                <div class="summary-inclusions">
+                  <h4>Included in your stay:</h4>
+                  <ul>
+                    <li>
+                      <i class="fas fa-check"></i> Complimentary breakfast
+                    </li>
+                    <li><i class="fas fa-check"></i> Free Wi-Fi</li>
+                    <li><i class="fas fa-check"></i> Secure parking</li>
+                    <li><i class="fas fa-check"></i> Daily housekeeping</li>
+                  </ul>
+                </div>
+
+                <div class="summary-notes">
+                  <p>
+                    <i class="fas fa-info-circle"></i> Rates are subject to 15%
+                    VAT
+                  </p>
+                  <p>
+                    <i class="fas fa-info-circle"></i> Free cancellation up to
+                    48 hours before arrival
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-options">
+                <h3>Need Help Booking?</h3>
+                <div class="contact-methods">
+                  <a href="tel:0819557777" class="contact-option">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                      <strong>Call Us</strong>
+                      <span>0819557777</span>
+                    </div>
+                  </a>
+                  <a
+                    href="https://wa.me/264819557777?text=Hi%20Monte%20Carlo%20Guesthouse,%20I%20would%20like%20to%20make%20a%20booking."
+                    class="contact-option"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                      <strong>WhatsApp</strong>
+                      <span>0819557777</span>
+                    </div>
+                  </a>
+                  <a
+                    href="mailto:montecarloguesthouse@gmail.com"
+                    class="contact-option"
+                  >
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                      <strong>Email Us</strong>
+                      <span>montecarloguesthouse@gmail.com</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Confirmation Modal -->
+      <div
+        class="confirmation-modal"
+        role="dialog"
+        aria-label="Booking confirmation"
+        aria-hidden="true"
+      >
+        <div class="modal-content">
+          <div class="modal-success">
+            <div class="success-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Booking Request Sent!</h2>
+            <p>
+              Thank you for choosing Monte Carlo Guesthouse. We've received your
+              booking request and will contact you within 24 hours to confirm
+              your reservation.
+            </p>
+
+            <div class="booking-reference">
+              <p>
+                Your reference number:
+                <strong id="reference-number">MCG-2024-00123</strong>
+              </p>
+            </div>
+
+            <div class="next-steps">
+              <h3>What happens next?</h3>
+              <ul>
+                <li>We'll check availability for your selected dates</li>
+                <li>
+                  You'll receive a confirmation email with payment details
+                </li>
+                <li>
+                  Our team will contact you if we need additional information
+                </li>
+              </ul>
+            </div>
+
+            <div class="modal-actions">
+              <button class="btn btn-primary" id="close-modal">
+                Return to Website
+              </button>
+              <a href="index.html" class="btn btn-outline">Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Book Direct -->
+      <section class="why-book-section section-padding bg-light">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Why Book Direct?</h2>
+            <div class="divider"></div>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-percentage"></i>
+              </div>
+              <h3>Best Rate Guarantee</h3>
+              <p>
+                We guarantee the best available rates when you book directly
+                through our website.
+              </p>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <h3>Exclusive Benefits</h3>
+              <p>
+                Direct bookings receive complimentary room upgrades when
+                available and welcome gifts.
+              </p>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <h3>Personalized Service</h3>
+              <p>
+                Get personalized attention and special requests handled directly
+                by our team.
+              </p>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Flexible Cancellation</h3>
+              <p>
+                Enjoy more flexible cancellation policies when booking directly
+                with us.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section class="faq-section section-padding">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Booking FAQs</h2>
+            <div class="divider"></div>
+          </div>
+
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is your cancellation policy?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer" aria-hidden="true">
+                <p>
+                  We offer free cancellation up to 48 hours before your
+                  scheduled check-in time. Cancellations made within 48 hours
+                  will incur a charge equivalent to one night's stay. Please
+                  refer to our full terms and conditions for detailed
+                  information.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Do you require a deposit?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer" aria-hidden="true">
+                <p>
+                  We require a 30% deposit to confirm your booking. The
+                  remaining balance is due upon arrival. For special offers or
+                  peak season bookings, different deposit requirements may
+                  apply.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What time is check-in and check-out?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer" aria-hidden="true">
+                <p>
+                  Check-in time is from 2:00 PM, and check-out time is by 11:00
+                  AM. Early check-in and late check-out may be available upon
+                  request, subject to availability and additional charges.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Do you accommodate special requests?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer" aria-hidden="true">
+                <p>
+                  Yes, we do our best to accommodate special requests. Please
+                  mention any specific requirements in the 'Special Requests'
+                  field during booking, and our team will contact you to discuss
+                  how we can make your stay perfect.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is breakfast included?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer" aria-hidden="true">
+                <p>
+                  Yes, a complimentary buffet breakfast is included for all
+                  guests. Breakfast is served daily from 6:30 AM to 10:30 AM in
+                  our dining area. Special dietary requirements can be
+                  accommodated with prior notice.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="footer-logo">
+              <img
+                src="assets/images/logo/monte-carlo-logo.jpg"
+                alt="Monte Carlo Guesthouse Logo"
+                width="150"
+                height="50"
+              />
+            </a>
+            <p class="footer-description">
+              Upscale African hospitality in the heart of Eehnana, Namibia.
+              Experience luxury, comfort, and authentic warmth.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/share/1ZvoL6nKzv/"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.tripadvisor.com/Hotel_Review-g1730599-d3825885-Reviews-Monte_Carlo_Guest_House-Oshakati_Oshana_Region.html"
+                aria-label="TripAdvisor"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-tripadvisor"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="rooms.html">Rooms & Suites</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contact Info</h3>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Hifikepunye Pohamba
+                Street-Eenhana erf 134
+              </li>
+              <li><i class="fas fa-phone"></i> 0819557777</li>
+              <li>
+                <i class="fas fa-envelope"></i> montecarloguesthouse@gmail.com
+              </li>
+              <li><i class="fab fa-whatsapp"></i> 0819557777</li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Subscribe for exclusive offers and updates</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="current-year"></span> Monte Carlo Guesthouse. All
+            rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
+
+
